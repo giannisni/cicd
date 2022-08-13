@@ -7,11 +7,19 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootApplication
 public class Application {
 
+
+
+	@GetMapping("/welcome")
+	public String welcome(){
+		return "Welcome";
+	}
 	public static void main(String[] args) {
+
 		SpringApplication.run(Application.class, args);
 	}
 
@@ -31,3 +39,11 @@ public class Application {
 	}
 
 }
+
+//echo "# cicd" >> README.md
+//		git init
+//		git add README.md
+//		git commit -m "first commit"
+//		git branch -M main
+//		git remote add origin https://github.com/giannisni/cicd.git
+//		git push -u origin main
